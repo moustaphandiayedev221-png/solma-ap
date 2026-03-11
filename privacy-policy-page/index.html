@@ -7,19 +7,24 @@
   <title>Politique de confidentialité — SOLMA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0a0f;
-      --bg-card: #12121a;
-      --bg-elevated: #1a1a24;
-      --text: #e8e8ed;
-      --text-muted: #8888a0;
-      --accent: #6366f1;
-      --accent-glow: rgba(99, 102, 241, 0.2);
-      --border: rgba(255, 255, 255, 0.06);
-      --radius: 16px;
-      --radius-sm: 10px;
+      --bg: #07070a;
+      --bg-card: rgba(255, 255, 255, 0.02);
+      --bg-card-hover: rgba(255, 255, 255, 0.04);
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --text: #f4f4f6;
+      --text-muted: #9ca3af;
+      --text-soft: #6b7280;
+      --accent: #f59e0b;
+      --accent-soft: rgba(245, 158, 11, 0.15);
+      --accent-glow: rgba(245, 158, 11, 0.25);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --radius-full: 9999px;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
     }
 
     * {
@@ -33,169 +38,290 @@
     }
 
     body {
-      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.75;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* Background gradient */
+    /* Animated gradient mesh background */
     body::before {
       content: '';
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100vh;
+      inset: 0;
       background: 
-        radial-gradient(ellipse 80% 50% at 50% -20%, var(--accent-glow), transparent),
-        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(99, 102, 241, 0.08), transparent),
-        radial-gradient(ellipse 40% 30% at 0% 80%, rgba(99, 102, 241, 0.05), transparent);
+        radial-gradient(ellipse 120% 80% at 20% -10%, var(--accent-glow), transparent 50%),
+        radial-gradient(ellipse 80% 60% at 80% 20%, rgba(139, 92, 246, 0.08), transparent 45%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(59, 130, 246, 0.05), transparent 40%);
       pointer-events: none;
       z-index: 0;
     }
 
+    /* Subtle grid overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
     .container {
-      max-width: 720px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 24px 80px;
       position: relative;
       z-index: 1;
     }
 
     /* Header */
     header {
-      padding: 48px 0 40px;
+      padding: 72px 0 56px;
       text-align: center;
     }
 
-    .logo {
-      font-size: 2rem;
-      font-weight: 700;
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
+      border-radius: var(--radius-sm);
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 32px var(--accent-glow);
       letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #fff 0%, var(--text-muted) 100%);
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #fff 0%, #e5e7eb 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.125rem;
       font-weight: 500;
       color: var(--text-muted);
       margin-top: 8px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     .last-update {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 16px;
-      padding: 8px 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-size: 0.875rem;
-      color: var(--text-muted);
+      gap: 10px;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      color: var(--text-soft);
+      backdrop-filter: blur(12px);
     }
 
     .last-update::before {
       content: '';
-      width: 6px;
-      height: 6px;
-      background: var(--accent);
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
       border-radius: 50%;
-      box-shadow: 0 0 12px var(--accent);
+      box-shadow: 0 0 12px #22c55e;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
     }
 
     /* Intro */
     .intro {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
       border-radius: var(--radius);
-      padding: 28px 32px;
+      padding: 32px 36px;
       margin-bottom: 32px;
+      backdrop-filter: blur(16px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .intro:hover {
+      border-color: rgba(255, 255, 255, 0.12);
     }
 
     .intro p {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
+
+    .intro .highlight {
+      color: var(--accent);
+      font-weight: 500;
     }
 
     /* Sections */
+    .sections {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
     section {
-      margin-bottom: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    section:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
     }
 
     section h2 {
-      font-size: 1.125rem;
-      font-weight: 600;
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
       color: var(--text);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
+      letter-spacing: -0.01em;
     }
 
-    section h2::before {
-      content: '';
-      width: 4px;
-      height: 20px;
-      background: linear-gradient(180deg, var(--accent), transparent);
-      border-radius: 2px;
+    .section-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 8px;
+      font-size: 0.8125rem;
+      font-weight: 700;
     }
 
     section p {
       color: var(--text-muted);
       font-size: 0.9375rem;
+      line-height: 1.8;
+      padding-left: 42px;
+    }
+
+    @media (max-width: 540px) {
+      section p {
+        padding-left: 0;
+      }
     }
 
     /* Contact block */
     .contact {
-      margin-top: 48px;
-      padding: 32px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
+      margin-top: 40px;
+      padding: 36px;
+      background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(139, 92, 246, 0.08) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.2);
       border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.5rem;
     }
 
     .contact h2 {
-      margin-bottom: 16px;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      padding: 0;
     }
 
     .contact a {
       color: var(--accent);
       text-decoration: none;
-      transition: opacity 0.2s;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
     }
 
     .contact a:hover {
-      opacity: 0.8;
+      color: #fbbf24;
+      text-decoration: underline;
     }
 
     /* Footer */
     footer {
-      padding: 48px 0 64px;
+      padding: 48px 0 40px;
       text-align: center;
-      color: var(--text-muted);
+      color: var(--text-soft);
       font-size: 0.8125rem;
+      border-top: 1px solid var(--glass-border);
+      margin-top: 48px;
     }
 
     /* Responsive */
     @media (max-width: 600px) {
       header {
-        padding: 32px 0 28px;
+        padding: 48px 0 40px;
+      }
+
+      .logo {
+        font-size: 1.75rem;
       }
 
       .intro {
-        padding: 20px 24px;
+        padding: 24px;
+      }
+
+      section {
+        padding: 22px 24px;
       }
 
       .contact {
-        padding: 24px;
+        padding: 28px 24px;
       }
     }
   </style>
@@ -203,58 +329,63 @@
 <body>
   <div class="container">
     <header>
+      <div class="logo-badge">S</div>
       <div class="logo">SOLMA</div>
       <h1>Politique de confidentialité</h1>
       <div class="last-update">Dernière mise à jour : Mars 2026</div>
     </header>
 
     <div class="intro">
-      <p>SOLMA s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles dans le cadre de notre application mobile de vente de chaussures.</p>
+      <p><span class="highlight">SOLMA</span> s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles dans le cadre de notre application mobile de vente de chaussures premium.</p>
     </div>
 
-    <section>
-      <h2>1. Données que nous collectons</h2>
-      <p>Nous collectons les données suivantes : informations d'identification (nom, prénom, email, photo de profil si vous utilisez une connexion sociale) ; données de livraison (adresse postale, numéro de téléphone) ; informations de paiement traitées exclusivement par notre prestataire de paiement sécurisé ; historique de commandes ; préférences d'application (langue, devise, thème) ; token de notification push pour vous envoyer des mises à jour sur vos commandes et offres.</p>
-    </section>
+    <div class="sections">
+      <section>
+        <h2><span class="section-num">1</span> Données que nous collectons</h2>
+        <p>Nous collectons les données suivantes : informations d'identification (nom, prénom, email, photo de profil si vous utilisez une connexion sociale) ; données de livraison (adresse postale, numéro de téléphone) ; informations de paiement traitées exclusivement par notre prestataire de paiement sécurisé ; historique de commandes ; préférences d'application (langue, devise, thème) ; token de notification push pour vous envoyer des mises à jour sur vos commandes et offres.</p>
+      </section>
 
-    <section>
-      <h2>2. Finalités du traitement</h2>
-      <p>Vos données sont utilisées pour : créer et gérer votre compte ; traiter vos commandes et la livraison ; envoyer des notifications relatives à vos achats ; améliorer nos services et l'expérience utilisateur ; respecter nos obligations légales.</p>
-    </section>
+      <section>
+        <h2><span class="section-num">2</span> Finalités du traitement</h2>
+        <p>Vos données sont utilisées pour : créer et gérer votre compte ; traiter vos commandes et la livraison ; envoyer des notifications relatives à vos achats ; améliorer nos services et l'expérience utilisateur ; respecter nos obligations légales.</p>
+      </section>
 
-    <section>
-      <h2>3. Sous-traitants et partenaires</h2>
-      <p>Nous nous appuyons sur des prestataires techniques de confiance : base de données et authentification ; prestataire de paiement sécurisé (norme PCI-DSS) ; service de notifications push ; fournisseurs de connexion sociale (Google, Apple) ; service de taux de change pour l'affichage des prix. Ces prestataires traitent vos données conformément à nos instructions et aux exigences légales.</p>
-    </section>
+      <section>
+        <h2><span class="section-num">3</span> Sous-traitants et partenaires</h2>
+        <p>Nous nous appuyons sur des prestataires techniques de confiance : base de données et authentification ; prestataire de paiement sécurisé (norme PCI-DSS) ; service de notifications push ; fournisseurs de connexion sociale (Google, Apple) ; service de taux de change pour l'affichage des prix. Ces prestataires traitent vos données conformément à nos instructions et aux exigences légales.</p>
+      </section>
 
-    <section>
-      <h2>4. Durée de conservation</h2>
-      <p>Les données de compte et de profil sont conservées tant que votre compte est actif. Les données de commande sont conservées pour les obligations légales et comptables (généralement 5 à 10 ans selon la réglementation). Les tokens de notification sont supprimés à la déconnexion. Vous pouvez demander la suppression de votre compte à tout moment.</p>
-    </section>
+      <section>
+        <h2><span class="section-num">4</span> Durée de conservation</h2>
+        <p>Les données de compte et de profil sont conservées tant que votre compte est actif. Les données de commande sont conservées pour les obligations légales et comptables (généralement 5 à 10 ans selon la réglementation). Les tokens de notification sont supprimés à la déconnexion. Vous pouvez demander la suppression de votre compte à tout moment.</p>
+      </section>
 
-    <section>
-      <h2>5. Vos droits (RGPD)</h2>
-      <p>Conformément au Règlement général sur la protection des données (RGPD), vous disposez des droits suivants : accès à vos données ; rectification des données inexactes ; suppression (« droit à l'oubli ») ; limitation du traitement ; portabilité des données ; opposition au traitement ; retirer votre consentement. Pour exercer ces droits, contactez-nous. Vous pouvez également introduire une réclamation auprès de l'autorité de contrôle de votre pays.</p>
-    </section>
+      <section>
+        <h2><span class="section-num">5</span> Vos droits (RGPD)</h2>
+        <p>Conformément au Règlement général sur la protection des données (RGPD), vous disposez des droits suivants : accès à vos données ; rectification des données inexactes ; suppression (« droit à l'oubli ») ; limitation du traitement ; portabilité des données ; opposition au traitement ; retirer votre consentement. Pour exercer ces droits, contactez-nous. Vous pouvez également introduire une réclamation auprès de l'autorité de contrôle de votre pays.</p>
+      </section>
 
-    <section>
-      <h2>6. Sécurité</h2>
-      <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées : chiffrement HTTPS pour toutes les communications ; authentification sécurisée ; paiements délégués à un prestataire certifié PCI-DSS ; stockage des données sensibles sur des infrastructures sécurisées. Aucun numéro de carte bancaire n'est stocké sur nos serveurs.</p>
-    </section>
+      <section>
+        <h2><span class="section-num">6</span> Sécurité</h2>
+        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées : chiffrement HTTPS pour toutes les communications ; authentification sécurisée ; paiements délégués à un prestataire certifié PCI-DSS ; stockage des données sensibles sur des infrastructures sécurisées. Aucun numéro de carte bancaire n'est stocké sur nos serveurs.</p>
+      </section>
 
-    <section>
-      <h2>7. Stockage local et préférences</h2>
-      <p>L'application utilise le stockage local de votre appareil pour vos préférences (thème clair/sombre, langue, devise), votre panier et vos favoris. Ces données restent sur votre appareil et ne sont pas transmises à des tiers, sauf pour la synchronisation de votre compte si vous êtes connecté.</p>
-    </section>
+      <section>
+        <h2><span class="section-num">7</span> Stockage local et préférences</h2>
+        <p>L'application utilise le stockage local de votre appareil pour vos préférences (thème clair/sombre, langue, devise), votre panier et vos favoris. Ces données restent sur votre appareil et ne sont pas transmises à des tiers, sauf pour la synchronisation de votre compte si vous êtes connecté.</p>
+      </section>
 
-    <section>
-      <h2>8. Modifications et contact</h2>
-      <p>Nous pouvons mettre à jour cette politique pour refléter des changements de nos pratiques ou de la réglementation. La date de dernière mise à jour est indiquée en tête de document.</p>
-    </section>
+      <section>
+        <h2><span class="section-num">8</span> Modifications et contact</h2>
+        <p>Nous pouvons mettre à jour cette politique pour refléter des changements de nos pratiques ou de la réglementation. La date de dernière mise à jour est indiquée en tête de document.</p>
+      </section>
+    </div>
 
     <div class="contact">
+      <div class="contact-icon">✉</div>
       <h2>Nous contacter</h2>
-      <p>Pour toute question relative à vos données personnelles : <a href="mailto:support@solma.com">support@solma.com</a> ou via le Centre d'aide de l'application.</p>
+      <p>Pour toute question relative à vos données personnelles :</p>
+      <a href="mailto:moustaphandiayedev221@gmail.com">moustaphandiayedev221@gmail.com</a>
     </div>
 
     <footer>

@@ -6,7 +6,7 @@ Cette page HTML peut être hébergée sur **GitHub Pages** pour fournir un lien 
 
 - **Aucune donnée sensible** : pas de clés API, URLs internes ou secrets
 - Design moderne, responsive, compatible mobile
-- Contact générique : `support@solma.com` (modifiable dans `index.html`)
+- Contact : `moustaphandiayedev221@gmail.com` (modifiable dans `index.html`)
 
 ## Hébergement sur GitHub Pages
 
