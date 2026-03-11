@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politique de confidentialité de l'application SOLMA - E-commerce de chaussures premium">
+  <title>Politique de confidentialité — SOLMA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg-card: #12121a;
+      --bg-elevated: #1a1a24;
+      --text: #e8e8ed;
+      --text-muted: #8888a0;
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.2);
+      --border: rgba(255, 255, 255, 0.06);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Background gradient */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, var(--accent-glow), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(99, 102, 241, 0.08), transparent),
+        radial-gradient(ellipse 40% 30% at 0% 80%, rgba(99, 102, 241, 0.05), transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    header {
+      padding: 48px 0 40px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff 0%, var(--text-muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .last-update {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .last-update::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    /* Intro */
+    .intro {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 32px;
+    }
+
+    .intro p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: linear-gradient(180deg, var(--accent), transparent);
+      border-radius: 2px;
+    }
+
+    section p {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+    }
+
+    /* Contact block */
+    .contact {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .contact h2 {
+      margin-bottom: 16px;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .contact a:hover {
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0 64px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8125rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        padding: 32px 0 28px;
+      }
+
+      .intro {
+        padding: 20px 24px;
+      }
+
+      .contact {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">SOLMA</div>
+      <h1>Politique de confidentialité</h1>
+      <div class="last-update">Dernière mise à jour : Mars 2026</div>
+    </header>
+
+    <div class="intro">
+      <p>SOLMA s'engage à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles dans le cadre de notre application mobile de vente de chaussures.</p>
+    </div>
+
+    <section>
+      <h2>1. Données que nous collectons</h2>
+      <p>Nous collectons les données suivantes : informations d'identification (nom, prénom, email, photo de profil si vous utilisez une connexion sociale) ; données de livraison (adresse postale, numéro de téléphone) ; informations de paiement traitées exclusivement par notre prestataire de paiement sécurisé ; historique de commandes ; préférences d'application (langue, devise, thème) ; token de notification push pour vous envoyer des mises à jour sur vos commandes et offres.</p>
+    </section>
+
+    <section>
+      <h2>2. Finalités du traitement</h2>
+      <p>Vos données sont utilisées pour : créer et gérer votre compte ; traiter vos commandes et la livraison ; envoyer des notifications relatives à vos achats ; améliorer nos services et l'expérience utilisateur ; respecter nos obligations légales.</p>
+    </section>
+
+    <section>
+      <h2>3. Sous-traitants et partenaires</h2>
+      <p>Nous nous appuyons sur des prestataires techniques de confiance : base de données et authentification ; prestataire de paiement sécurisé (norme PCI-DSS) ; service de notifications push ; fournisseurs de connexion sociale (Google, Apple) ; service de taux de change pour l'affichage des prix. Ces prestataires traitent vos données conformément à nos instructions et aux exigences légales.</p>
+    </section>
+
+    <section>
+      <h2>4. Durée de conservation</h2>
+      <p>Les données de compte et de profil sont conservées tant que votre compte est actif. Les données de commande sont conservées pour les obligations légales et comptables (généralement 5 à 10 ans selon la réglementation). Les tokens de notification sont supprimés à la déconnexion. Vous pouvez demander la suppression de votre compte à tout moment.</p>
+    </section>
+
+    <section>
+      <h2>5. Vos droits (RGPD)</h2>
+      <p>Conformément au Règlement général sur la protection des données (RGPD), vous disposez des droits suivants : accès à vos données ; rectification des données inexactes ; suppression (« droit à l'oubli ») ; limitation du traitement ; portabilité des données ; opposition au traitement ; retirer votre consentement. Pour exercer ces droits, contactez-nous. Vous pouvez également introduire une réclamation auprès de l'autorité de contrôle de votre pays.</p>
+    </section>
+
+    <section>
+      <h2>6. Sécurité</h2>
+      <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées : chiffrement HTTPS pour toutes les communications ; authentification sécurisée ; paiements délégués à un prestataire certifié PCI-DSS ; stockage des données sensibles sur des infrastructures sécurisées. Aucun numéro de carte bancaire n'est stocké sur nos serveurs.</p>
+    </section>
+
+    <section>
+      <h2>7. Stockage local et préférences</h2>
+      <p>L'application utilise le stockage local de votre appareil pour vos préférences (thème clair/sombre, langue, devise), votre panier et vos favoris. Ces données restent sur votre appareil et ne sont pas transmises à des tiers, sauf pour la synchronisation de votre compte si vous êtes connecté.</p>
+    </section>
+
+    <section>
+      <h2>8. Modifications et contact</h2>
+      <p>Nous pouvons mettre à jour cette politique pour refléter des changements de nos pratiques ou de la réglementation. La date de dernière mise à jour est indiquée en tête de document.</p>
+    </section>
+
+    <div class="contact">
+      <h2>Nous contacter</h2>
+      <p>Pour toute question relative à vos données personnelles : <a href="mailto:support@solma.com">support@solma.com</a> ou via le Centre d'aide de l'application.</p>
+    </div>
+
+    <footer>
+      © 2026 SOLMA — Application mobile e-commerce
+    </footer>
+  </div>
+</body>
+</html>

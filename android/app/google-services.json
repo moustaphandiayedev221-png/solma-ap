@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "438014545661",
+    "project_id": "colways-532e4",
+    "storage_bucket": "colways-532e4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438014545661:android:5f4f677b598c4db7467894",
+        "android_client_info": {
+          "package_name": "com.apps.colways"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438014545661-4hvot1l1b2kj1s52h9up7hvpvh95pmb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyyktamKVD5U5EIl40N9iCV1MNIcDuLmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438014545661-4hvot1l1b2kj1s52h9up7hvpvh95pmb2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "438014545661-qb6iv2sjoctk9ga63lqqai9l29bjg7gn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.apps.colways"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
