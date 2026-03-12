@@ -1,8 +1,0 @@
-# Configuration des Edge Functions
-# Évite l'erreur 401 Invalid JWT lors des appels client et webhooks
-
-[functions.send-push-notification]
-verify_jwt = false
-
-[functions.notify-admin-new-order]
-verify_jwt = false
